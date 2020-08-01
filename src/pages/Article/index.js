@@ -25,10 +25,14 @@ const Article = () => {
             setState({ ...state, heightArticle: ref.current.clientHeight });
     }, [state.isArticle]);
 
+    const remove = e => {
+        setState({ ...state, isArticle: false });
+    }
+
     return state.isArticle && transitions.map(
         ({ item, key, props }) => 
-            item && <animated.div className="Article" ref={ref} style={{ ...props }} key={key}>
-                <div className="card">
+            item && <animated.div className="Article" onClick={remove} ref={ref} style={{ ...props }} key={key}>
+                <div className="card" onClick={e => e.stopPropagation()}>
                     <button className="close" onClick={() => setState({ ...state, isArticle: false })}>
                         <MdClose />
                     </button>
