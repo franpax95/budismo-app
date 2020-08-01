@@ -1,0 +1,58 @@
+.Home{
+    min-height: 100vh;
+    width: 100%;
+    padding: 20vh 0;
+
+    position: absolute;
+    top: 0;
+
+    background-color: #262626;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    color: white;
+}
+
+
+.Home > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.Home .icon{
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+
+    border: solid 1px white;
+    border-radius: 50%;
+}
+
+.Home .icon img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    color: white;
+}
+
+.Home .title,
+.Home .subtitle {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.Home .title{
+    margin: 10vh 0 15px 0;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.Home .subtitle{
+    margin: 15px 0 10vh 0;
+    font-size: 20px;
+    font-weight: 300;
+}
